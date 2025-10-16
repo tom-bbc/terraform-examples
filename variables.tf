@@ -1,7 +1,7 @@
 variable "instance_name" {
   description = "Name for the GPU instance"
   type        = string
-  default     = "nerfstudio-gpu"
+  default     = "example-gpu-instance"
 }
 
 variable "image_name" {
@@ -20,17 +20,24 @@ variable "flavor_name" {
 variable "key_name" {
   description = "SSH key pair name"
   type        = string
-  default     = "your-keypair-name"  # REPLACE WITH YOUR KEYPAIR NAME
+  # default     = "tompotter"
+  default = "YOUR_KEY_NAME"  # Find what key you use with OpenStack through the web UI
 }
 
 variable "network_name" {
   description = "Private network name"
   type        = string
-  default     = "nerfstudio-network"
+  default     = "example-instance-network"
 }
 
 variable "subnet_cidr" {
   description = "CIDR for private subnet"
   type        = string
   default     = "192.168.100.0/24"
+}
+
+variable "home_ip_address" {
+  description = "Your local IP address for home access"  # Visit https://whatismyipaddress.com/
+  type = string
+  default = "YOUR.HOME.IP.HERE"
 }
