@@ -1,6 +1,10 @@
 # terraform-examples
 
-Examples of how to build infrastructure-as-code in OpenStack using Terraform
+Examples of how to build infrastructure-as-code using Terraform
+
+## OpenStack
+
+Examples specific to OpenStack
 
 
 ### OpenStack Setup
