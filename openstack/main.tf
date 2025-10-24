@@ -70,6 +70,6 @@ resource "openstack_networking_floatingip_v2" "ip_address" {
 
 # Associate floating IP with instance
 resource "openstack_compute_floatingip_associate_v2" "ip_address_attach" {
-  floating_ip = openstack_networking_floatingip_v2.fip.address
+  floating_ip = openstack_networking_floatingip_v2.ip_address.address
   instance_id = openstack_compute_instance_v2.gpu_instance.id
 }
